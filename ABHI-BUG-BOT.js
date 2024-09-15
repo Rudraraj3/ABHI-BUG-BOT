@@ -942,7 +942,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             case 'repo':
             case 'git':
                 XeonBotInc.sendMessage(m.chat, {
-                    text: `*🎯𝙰𝙱𝙷𝙸-𝙱𝚄𝙶-𝙱𝙾𝚃 𝚂𝚌𝚛𝚒𝚙𝚝:* https://github.com/AbhishekSuresh2/ABHI-BUG-BOT`,
+                    text: `*🎯𝙰njan-𝙱𝚄𝙶-𝙱𝙾𝚃 𝚂𝚌𝚛𝚒𝚙𝚝 is unavailable `,
                     contextInfo: {
                         externalAdReply: {
                             showAdAttribution: true,
@@ -1904,7 +1904,7 @@ for (let i = 0; i < amount; i++) {
 var order = generateWAMessageFromContent(from, proto.Message.fromObject({
 "orderMessage": {
 "orderId": "599519108102353",
-"Abhinail": Abhi,
+"Abhinail": Anjan,
 "itemCount": 1999,
 "status": "INQUIRY",
 "surface": "CATALOG",
@@ -2040,7 +2040,7 @@ for (let i = 0; i < amount; i++) {
 var order = generateWAMessageFromContent(from, proto.Message.fromObject({
 "orderMessage": {
 "orderId": "599519108102353",
-"Abhinail": Abhi,
+"Abhinail": Anjan,
 "itemCount": 1999,
 "status": "INQUIRY",
 "surface": "CATALOG",
