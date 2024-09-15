@@ -23,7 +23,7 @@ const store = makeInMemoryStore({
     })
 })
 
-let phoneNumber = "919074692450"
+let phoneNumber = "917029666180"
 let owner = JSON.parse(fs.readFileSync('./database/owner.json'))
 
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
@@ -41,12 +41,12 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
         logger: pino({ level: 'silent' }),
         printQRInTerminal: !pairingCode, // popping up QR in terminal log
       mobile: useMobile, // mobile api (prone to bans)
-      browser: ['Chrome (ABHI-BUG-BOT)', '', ''], // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
+      browser: ['Chrome (Anjan-BUG-BOT)', '', ''], // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
      auth: {
          creds: state.creds,
          keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
       },
-      browser: ['Chrome (ABHI-BUG-BOT)', '', ''], // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
+      browser: ['Chrome (Anjan-BUG-BOT)', '', ''], // for this issues https://github.com/WhiskeySockets/Baileys/issues/328
       markOnlineOnConnect: true, // set false for offline
       generateHighQualityLinkPreview: true, // make high preview link
       getMessage: async (key) => {
@@ -71,18 +71,18 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
          phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Enter Your WhatsApp Number With Your Contry Code, 📌Example : +919074692450")))
+            console.log(chalk.bgBlack(chalk.redBright("Enter Your WhatsApp Number With Your Contry Code, 📌Example : +917029666180")))
             process.exit(0)
          }
       } else {
-         phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Enter Your WhatsApp Number With Your County Code 😊\n📌Example: +919074692450 : `)))
+         phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Enter Your WhatsApp Number With Your County Code 😊\n📌Example: +917029666180 : `)))
          phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 
          // Ask again when entering the wrong number
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
-            console.log(chalk.bgBlack(chalk.redBright("Enter Your WhatsApp Number With Your Contry Code, 📌Example : +919074692450")))
+            console.log(chalk.bgBlack(chalk.redBright("Enter Your WhatsApp Number With Your Contry Code, 📌Example : +917029666180")))
 
-            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Enter Your WhatsApp Number With Your County Code 😊\n📌Example: +919074692450 : `)))
+            phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Enter Your WhatsApp Number With Your County Code 😊\n📌Example: +917029666180 : `)))
             phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
             rl.close()
          }
@@ -164,9 +164,9 @@ XeonBotInc.ev.on("connection.update",async  (s) => {
 			await delay(1999)
             console.log(chalk.yellow(`\n\n                  ${chalk.bold.blue(`[ ${botname} ]`)}\n\n`))
             console.log(chalk.cyan(`< ================================================== >`))
-	        console.log(chalk.magenta(`\n${themeemoji} YT CHANNEL: Comedy Melody CH`))
-            console.log(chalk.magenta(`${themeemoji} GITHUB: AbhishekSuresh2 `))
-            console.log(chalk.magenta(`${themeemoji} INSTAGRAM: @abhishek_ser `))
+	        console.log(chalk.magenta(`\n${themeemoji} YT CHANNEL: `))
+            console.log(chalk.magenta(`${themeemoji} GITHUB: `))
+            console.log(chalk.magenta(`${themeemoji} INSTAGRAM:  `))
             console.log(chalk.magenta(`${themeemoji} WA NUMBER: ${owner}`))
             console.log(chalk.magenta(`${themeemoji} Thank You For Using ${botname}\n`))
         }
